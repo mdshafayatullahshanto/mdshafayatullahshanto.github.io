@@ -933,9 +933,9 @@ section .container {
 
 
 
-/* Research Section - Enhanced Modern Styling */
-/* Research Section - Enhanced Modern Styling */
-section#research.research-section {
+/* Services Section - Enhanced Modern Styling */
+/* Services Section - Enhanced Modern Styling */
+section#services.services-section {
   /* Use template's section positioning system */
   overflow: hidden;
   position: absolute;
@@ -948,8 +948,8 @@ section#research.research-section {
   padding: 0;
 }
 
-/* When research section is shown */
-section#research.research-section.section-show {
+/* When services section is shown */
+section#services.services-section.section-show {
   top: 95px;
   bottom: auto;
   opacity: 1;
@@ -957,7 +957,7 @@ section#research.research-section.section-show {
 }
 
 /* Enhanced header / tags strip with modern styling */
-.research-header {
+.services-header {
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   padding: 24px 28px;
@@ -970,12 +970,12 @@ section#research.research-section.section-show {
   /* Increased from 1 */
 }
 
-.research-header:hover {
+.services-header:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-.research-header-top {
+.services-header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -985,8 +985,8 @@ section#research.research-section.section-show {
   /* Increased from 2 */
 }
 
-/* Responsive, accessible research social links */
-.research-social-links {
+/* Responsive, accessible services social links */
+.services-social-links {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -998,7 +998,7 @@ section#research.research-section.section-show {
   pointer-events: auto !important;
 }
 
-.research-icon {
+.services-icon {
   /* tweakable size/radius via CSS vars */
   --size: 46px;
 
@@ -1023,19 +1023,19 @@ section#research.research-section.section-show {
   -ms-user-select: none;
 }
 
-/* Hover effect for all research icons */
-.research-icon:hover {
+/* Hover effect for all services icons */
+.services-icon:hover {
   transform: scale(1.2) translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   filter: brightness(1.1);
 }
 
-.research-icon:active {
+.services-icon:active {
   transform: scale(1.1) translateY(-1px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.research-icon img {
+.services-icon img {
   pointer-events: none !important;
   /* let the anchor capture the click */
   transition: transform .2s ease;
@@ -1055,22 +1055,22 @@ section#research.research-section.section-show {
 
 /* Small screens: slightly smaller, tighter gap */
 @media (max-width: 600px) {
-  .research-social-links {
+  .services-social-links {
     gap: 8px;
   }
 
-  .research-icon {
+  .services-icon {
     --size: 40px;
   }
 
-  .research-icon img {
+  .services-icon img {
     width: 40px;
     height: 40px;
   }
 }
 
 
-.research-title {
+.services-title {
   font-size: 14px;
   font-weight: 800;
   padding: 0;
@@ -1086,7 +1086,7 @@ section#research.research-section.section-show {
   /* Allow inline-block for centering */
 }
 
-.research-title::after {
+.services-title::after {
   content: "";
   width: 120px;
   height: 2px;
@@ -1095,7 +1095,7 @@ section#research.research-section.section-show {
   margin: 4px 10px;
 }
 
-.research-tags {
+.services-tags {
   font-size: 16px;
   color: #6c757d;
   line-height: 1.6;
