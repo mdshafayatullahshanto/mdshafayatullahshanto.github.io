@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/website_images/favicon.png" />
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solar Analysis - Scandex Textile Industries Ltd">
+  <title>Solar Analysis | Md. Shafayat Ullah Shanto</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #0F766E;
+      --secondary-color: #27ae60;
+      --dark-bg: #0a0e27;
+      --card-bg: #ffffff;
+      --text-primary: #2c3e50;
+      --text-secondary: #7f8c8d;
+      --border-color: #e1e8ed;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: #f8f9fa;
+    }
+
+    /* Header Navigation */
+    .navbar {
+      background: var(--card-bg);
+      padding: 1rem 0;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .back-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* Project Header */
+    .project-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .project-header h1 {
+      font-size: 2.5rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Status Badge */
+    .status-badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: #d4edda;
+      color: #155724;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    /* Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Main Content */
+    .main-content {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      text-align: justify;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    .section p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    /* ── Aligned icon & dot with text ── */
+    .section ul li {
+      padding: 0.4rem 0;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .section ul li:before {
+      content: none;
+    }
+
+    .section ul li .li-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      min-width: 1.5rem;
+      background: #e8f5e9;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      line-height: 1;
+      color: #0F766E;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .section ul li .li-dot {
+      width: 0.65rem;
+      height: 0.65rem;
+      min-width: 0.65rem;
+      background: #0F766E;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h3 {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      text-align: justify;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-item {
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* Tech Stack Tags */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tech-tag {
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-secondary {
+      background: #3498db;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 968px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="logo">Md. Shafayat Ullah Shanto</a>
+      <a href="../../index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Project Header -->
+    <div class="project-header">
+      <h1>Solar Analysis – Scandex Textile Industries Ltd</h1>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+      <!-- Main Content -->
+      <div class="main-content">
+
+        <!-- Overview Section -->
+        <div class="section">
+          <h2>Overview</h2>
+          <p>
+            This project involved conducting a comprehensive <strong>solar radiation analysis</strong> for the <strong>Scandex Textile Industries Ltd</strong> building, a 10-story commercial facility under the <strong>Panam Group</strong>. The analysis was performed using <strong>Autodesk Insight</strong> within <strong>Autodesk Revit</strong> to evaluate solar exposure across all building surfaces and floor levels.
+          </p>
+          <p>
+            The primary objective was to identify high solar gain zones (rooftop and facade), optimize energy efficiency strategies, and support informed decisions on façade design, shading, glazing placement and HVAC load calculations. The full BIM model — spanning Basement through Level 8 with structural, duct and electrical plans — was developed in Revit and used as the basis for the solar simulation.
+          </p>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="section">
+          <h2>Key Features</h2>
+          <ul>
+            <li><span class="li-icon"><i class="fas fa-sun"></i></span>Full building solar radiation analysis across all 10 floors (Basement to Level 8) using Autodesk Insight</li>
+            <li><span class="li-icon"><i class="fas fa-layer-group"></i></span>Per-floor solar heatmap generation — plan view color mapping from low (purple) to high (yellow) solar gain</li>
+            <li><span class="li-icon"><i class="fas fa-building"></i></span>Complete 3D BIM model built in Autodesk Revit including architectural, MEP duct and electrical systems</li>
+            <li><span class="li-icon"><i class="fas fa-th"></i></span>Rooftop analysis identified maximum solar exposure zones to support solar panel placement optimization</li>
+            <li><span class="li-icon"><i class="fas fa-wind"></i></span>Facade solar exposure mapped to guide glazing selection, shading device design and HVAC load estimation</li>
+            <li><span class="li-icon"><i class="fas fa-chart-area"></i></span>Energy performance benchmarking to support green building compliance and sustainability targets</li>
+            <li><span class="li-icon"><i class="fas fa-drafting-compass"></i></span>Multi-discipline BIM coordination — structural plans, ceiling plans, duct layouts and electrical plans all integrated</li>
+            <li><span class="li-icon"><i class="fas fa-leaf"></i></span>Findings used to optimize building envelope and reduce cooling energy demand for the textile facility</li>
+          </ul>
+        </div>
+
+        <!-- Technical Components Section -->
+        <div class="section">
+          <h2>Technical Components</h2>
+          <ul>
+            <li><span class="li-dot"></span><span><strong>BIM Model (Revit – Scandex Textile Industries Ltd):</strong> Full 10-story building model including Basement, Ground Floor, Levels 1–8; structural plans, ceiling plans, and 3D views coordinated across disciplines</span></li>
+            <li><span class="li-dot"></span><span><strong>Solar Analysis Tool:</strong> Autodesk Insight integrated within Revit — used to simulate annual and seasonal solar radiation on all building surfaces</span></li>
+            <li><span class="li-dot"></span><span><strong>Radiation Heatmap (3D):</strong> Isometric color-coded radiation map of the full building showing yellow (high solar gain) and purple (low/shaded) zones per floor slab and façade panel</span></li>
+            <li><span class="li-dot"></span><span><strong>Radiation Heatmap (Plan View):</strong> Floor-level plan heatmaps for each level showing solar intensity distribution across the open-plan floor plate, identifying columns, cores and perimeter edge effects</span></li>
+            <li><span class="li-dot"></span><span><strong>MEP Duct Layout:</strong> Per-floor duct plans (Ground Floor Duct through Level 6 Duct) modeled in Revit to coordinate HVAC system routing with solar-affected zones</span></li>
+            <li><span class="li-dot"></span><span><strong>Electrical Plans:</strong> Per-floor electrical layouts (Ground Floor Electrical through Level 6 Electrical) integrated in the same BIM environment</span></li>
+            <li><span class="li-dot"></span><span><strong>Building Elevation Model:</strong> Detailed architectural elevation showing multi-story façade with window patterns, louvres, and rooftop plant — used as input geometry for solar simulation</span></li>
+            <li><span class="li-dot"></span><span><strong>Client:</strong> Scandex Textile Industries Ltd, under Panam Group — 10-story commercial/industrial building; model date March 2024</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+        <!-- Project Details -->
+        <div class="info-card">
+          <h3>🗂️ Project Details</h3>
+          <div class="info-item">
+            <span class="info-label"><strong>Status</strong></span>
+            <span class="status-badge" style="background: #d4edda; color: #155724;">
+              ✅ Completed
+            </span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>Client</strong></span>
+            <span class="info-value">Scandex Textile Industries Ltd</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>Group</strong></span>
+            <span class="info-value">Panam Group</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>Category</strong></span>
+            <span class="info-value">Solar Analysis, BIM, Energy Efficiency</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>Building Type</strong></span>
+            <span class="info-value">Commercial / Industrial</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>No. of Floors</strong></span>
+            <span class="info-value">10 Stories (Basement – Level 8)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>BIM Project Name</strong></span>
+            <span class="info-value">Scandex Textile Industries Ltd</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><strong>Model Date</strong></span>
+            <span class="info-value">March 2024</span>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="info-card">
+          <h3>⚙️ Tools &amp; Technologies</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Autodesk Revit</span>
+            <span class="tech-tag">Autodesk Insight</span>
+            <span class="tech-tag">BIM Modeling</span>
+            <span class="tech-tag">Solar Simulation</span>
+            <span class="tech-tag">MEP Coordination</span>
+            <span class="tech-tag">Energy Analysis</span>
+            <span class="tech-tag">3D Heatmapping</span>
+            <span class="tech-tag">Electrical Planning</span>
+          </div>
+        </div>
+
+        <!-- Skills Demonstrated -->
+        <div class="info-card">
+          <h3>🏅 Skills Demonstrated</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Solar Energy Analysis</span>
+            <span class="tech-tag">BIM Coordination</span>
+            <span class="tech-tag">Building Performance</span>
+            <span class="tech-tag">HVAC Load Estimation</span>
+            <span class="tech-tag">Facade Optimization</span>
+            <span class="tech-tag">Sustainable Design</span>
+            <span class="tech-tag">Multi-discipline BIM</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
